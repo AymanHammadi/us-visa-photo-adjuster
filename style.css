@@ -1,0 +1,217 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f8fc;
+    margin: 0;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+h1 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Photo Section and Frame */
+.photo-section {
+    flex: 1;
+    max-width: 600px;
+}
+
+.photo-frame {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Guidelines Styling */
+.guidelines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.label {
+    font-size: 0.8em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+
+.dimensions-note {
+    font-size: 0.9em;
+    color: #555555;
+    margin-top: 5px;
+}
+
+
+/* Controls Section */
+.controls-section {
+    flex: 1;
+    max-width: 300px;
+}
+
+.control-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0f0f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-group h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #0e2a78;
+}
+
+/* Button Styling */
+.control-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0e2a78;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #0056b3;
+}
+
+.download-btn {
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.download-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.download-btn:hover:enabled {
+    background-color: #218838;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4c4c;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+
+/* Guidelines */
+
+.guidelines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.face-line {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.29);
+    height: 69%;
+    bottom: 28%; 
+}
+.face-line .label {
+    top: 10px;
+    left: 10px;
+}
+
+.face-line2 {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(140, 255, 0, 0.384);
+    bottom: 37.5%; 
+}
+.face-line2 .label {
+    bottom: -50px;
+    left: 10px;
+}
+
+
+.eye-line {
+    position: absolute;
+    width: 100%;
+    height: 13%;
+    background-color: rgba(255, 0, 0, 0.29);
+    bottom: 56%;
+}
+
+.eye-line .label {
+    left: 10%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

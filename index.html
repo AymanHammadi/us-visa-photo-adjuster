@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.S. Visa Photo Adjuster</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="links">
+                <a href="https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/photos.html" target="_blank">U.S. Visa Photo Requirements</a>
+                <a href="https://github.com/aymanhammadi/us-visa-photo-adjuster" target="_blank">Source Code</a>
+            </div>
+            <h1>U.S. Visa Photo Adjuster</h1>
+            <p class="instructions">
+                Upload a photo and adjust the position and zoom level so that the photo meets the U.S. visa photo size requirements.
+            </p>
+                    
+        </header>
+        <div class="content">
+            <!-- Left section: Photo Frame -->
+            <div class="photo-section">
+                <input type="file" id="photoUpload" accept="image/*">
+                <div class="photo-frame" id="photoFrame">
+                    <canvas id="photoCanvas" width="600" height="600"></canvas>
+                    
+                    <!-- Guidelines with labels -->
+                    <div class="guidelines">
+                        <div class="eye-line" id="eyeLine">
+                            <span class="label">Eye Position</span>
+                        </div>
+                        <div class="face-line" id="faceLine">
+                            <span class="label">Top of the head, including the hair</span>
+                        </div>
+                        <div class="face-line2" id="faceLine2">
+                            <span class="label">Bottom of the chin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right section: Controls -->
+            <div class="controls-section">
+                <div class="control-group">
+                    <h2>Adjust Position</h2>
+                    <button class="control-btn" data-action="up">Up</button>
+                    <button class="control-btn" data-action="down">Down</button>
+                    <button class="control-btn" data-action="left">Left</button>
+                    <button class="control-btn" data-action="right">Right</button>
+                </div>
+
+                <div class="control-group">
+                    <h2>Adjust Zoom</h2>
+                    <button class="control-btn" data-action="zoomIn">Zoom In</button>
+                    <button class="control-btn" data-action="zoomOut">Zoom Out</button>
+                </div>
+
+                <button id="downloadButton" class="download-btn" disabled>Download Adjusted Image</button>
+                <p id="errorMessage" class="error-message"></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
